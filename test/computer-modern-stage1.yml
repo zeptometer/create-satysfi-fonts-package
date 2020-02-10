@@ -1,0 +1,13 @@
+name: fonts-computer-modern
+author:
+    name: Yuito Murase
+    email: yuito.murase@gmail.com
+font-metadata:
+    name: Computer Modern
+    version: 0.7.0
+    license: OFL
+    url: https://www.checkmyworking.com/cm-web-fonts/
+font-archive:
+    name: computer-modern.zip
+    url: https://www.checkmyworking.com/cm-web-fonts/Computer%20Modern.zip
+    extract: unzip -j -d computer-modern -o computer-modern.zip *.otf
