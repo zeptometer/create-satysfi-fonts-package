@@ -4,14 +4,27 @@ require '../stage1'
 
 class TestStage1 < Test::Unit::TestCase
 
-    def cm_yml 
-        YAML.load_file('computer-modern-stage1.yml')
+    def test_opam_generated_for_computer_modern
+        # given
+        yml = YAML.load_file('computer-modern-stage1.yml')
+
+        # when
+        actual = gen_opam(yml)
+
+        # then
+        expected = File.read('expected-computer-modern.opam')
+        assert_equal(expected, actual)
     end
 
-    def test_opam_generated_for_computer_modern
-        expected = File.read('expected-cm.opam')
-        actual = gen_opam(cm_yml)
+    def test_opam_generated_for_noto_sans_jp
+        # given
+        yml = YAML.load_file('noto-sans-jp-stage1.yml')
 
+        # when
+        actual = gen_opam(yml)
+
+        # then
+        expected = File.read('expected-noto-sans-jp.opam')
         assert_equal(expected, actual)
     end
 

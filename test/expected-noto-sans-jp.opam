@@ -1,0 +1,35 @@
+opam-version: "2.0"
+name: "satysfi-fonts-noto-sans-jp"
+version: "0.7.0+satysfi0.0.4"
+synopsis: "SATySFi Font Package for Donald Knuth's Computer Modern Fonts"
+description: """
+SATySFi font package for Donald Knuth's Computer Modern Fonts.
+
+This package installs fonts from https://www.checkmyworking.com/cm-web-fonts/.
+"""
+maintainer: "MURASE Yuito <yuito.murase@gmail.com>"
+authors: "MURASE Yuito <yuito.murase@gmail.com>"
+license: "OFL"
+homepage: "https://github.com/zeptometer/SATySFi-fonts-computer-modern"
+bug-reports: "https://github.com/zeptometer/SATySFi-fonts-computer-modern/issues"
+dev-repo: "git+https://github.com/zeptometer/SATySFi-fonts-computer-modern.git"
+extra-source "computer-modern.zip" {
+  archive: "https://www.checkmyworking.com/cm-web-fonts/Computer%20Modern.zip"
+  checksum: [
+    "sha256=845085c3347e75f591fc5c1957c89de6634125e9384db617979cbf71bcea580e"
+    "sha512=e7bcbc53a10b8ec3679dcade5a8a94cea7e1f60875ab38f2193b4fa8e33968e1f0abc8184a3df1e5210f6f5c731f96c727c6aa8f519423a29707d2dee5ada193"
+  ]
+}
+depends: [
+  "satysfi" {>= "0.0.3+dev2019.02.12" & < "0.0.5"}
+  "satyrographos" {>= "0.0.2" & < "0.0.3"}
+]
+build: [
+  ["unzip" "-j" "-d" "computer-modern" "-o" "computer-modern.zip" "*.ttf"]
+]
+install: [
+  ["satyrographos" "opam" "install"
+   "-name" "fonts-computer-modern"
+   "-prefix" "%{prefix}%"
+   "-script" "%{build}%/Satyristes"]
+]

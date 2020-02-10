@@ -10,4 +10,4 @@ font-metadata:
 font-archive:
     name: computer-modern.zip
     url: https://www.checkmyworking.com/cm-web-fonts/Computer%20Modern.zip
-    extract: unzip -j -d computer-modern -o computer-modern.zip *.otf
+    extract: unzip -j -d computer-modern -o computer-modern.zip *.ttf
