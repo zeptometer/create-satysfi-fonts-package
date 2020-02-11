@@ -13,5 +13,6 @@ site:
     dev-repo: "git+https://github.com/zeptometer/SATySFi-fonts-noto-sans-cjk-jp.git"
 font-archive:
     name: noto-sans-cjk-jp.zip
+    expand-dir: noto-sans-cjk-jp
     url: https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
     extract: unzip -j -d noto-sans-cjk-jp -o noto-sans-cjk-jp.zip *.otf
