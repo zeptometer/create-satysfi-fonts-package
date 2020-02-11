@@ -2,11 +2,11 @@ require 'test-unit'
 require 'yaml'
 require '../stage1'
 
-class TestStage1 < Test::Unit::TestCase
+class TestStage1_gen_opam < Test::Unit::TestCase
 
     def test_opam_generated_for_computer_modern
         # given
-        yml = YAML.load_file('computer-modern-unicode-stage1.yml')
+        yml = YAML.load_file('stage1-computer-modern-unicode.yml')
 
         # when
         actual = gen_opam(yml)
@@ -18,7 +18,7 @@ class TestStage1 < Test::Unit::TestCase
 
     def test_opam_generated_for_noto_sans_jp
         # given
-        yml = YAML.load_file('noto-sans-cjk-jp-stage1.yml')
+        yml = YAML.load_file('stage1-noto-sans-cjk-jp.yml')
 
         # when
         actual = gen_opam(yml)

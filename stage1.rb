@@ -47,14 +47,20 @@ def gen_opam(yml)
     end
     .join(" ")
 
-    `wget #{yml["font-archive"]["url"]} -O archive`
-    sha256sum = Digest::SHA256.file('archive').to_s
-    sha512sum = Digest::SHA512.file('archive').to_s
-    `rm archive`
+    archive_name = yml["font-archive"]["name"]
+    `wget #{yml["font-archive"]["url"]} -O #{archive_name}`
+    sha256sum = Digest::SHA256.file(archive_name).to_s
+    sha512sum = Digest::SHA512.file(archive_name).to_s
+
+    `rm #{archive_name}`
 
     File.open("actual-#{yml["name"]}.txt", "w") do |f|
       f.puts(OPAM_TEMPLATE.result(binding))
     end
 
     OPAM_TEMPLATE.result(binding)
+end
+
+def gen_stage2_yml(yml)
+    
 end
