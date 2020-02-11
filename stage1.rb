@@ -1,5 +1,6 @@
 require 'yaml'
 require 'erb'
+require 'digest'
 
 OPAM_TEMPLATE = ERB.new(<<EOS
 opam-version: "2.0"
@@ -20,8 +21,8 @@ dev-repo: "<%= yml["site"]["dev-repo"] %>"
 extra-source "<%= yml["font-archive"]["name"] %>" {
   archive: "<%= yml["font-archive"]["url"] %>"
   checksum: [
-    "sha256=c240fff666a7d66de83a9f09ef045732c07291f2c83a07ae25ed888dc92f00f0"
-    "sha512=fddad701425d1d1e761f1998b9a168fb60dff5972a858e44ae107e9bfa1678f807e71055b93b0969d29a0d728233a5532edc02c0655bded3ac5bc69b580da0c4"
+    "sha256=<%= sha256sum %>"
+    "sha512=<%= sha512sum %>"
   ]
 }
 depends: [
@@ -45,6 +46,11 @@ def gen_opam(yml)
       "\"#{cmd}\""
     end
     .join(" ")
+
+    `wget #{yml["font-archive"]["url"]} -O archive`
+    sha256sum = Digest::SHA256.file('archive').to_s
+    sha512sum = Digest::SHA512.file('archive').to_s
+    `rm archive`
 
     File.open("actual-#{yml["name"]}.txt", "w") do |f|
       f.puts(OPAM_TEMPLATE.result(binding))
