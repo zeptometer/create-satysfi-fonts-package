@@ -1,0 +1,18 @@
+name: fonts-computer-modern-unicode
+author:
+    name: Yuito Murase
+    email: yuito.murase@gmail.com
+font-metadata:
+    name: Computer Modern Unicode
+    version: 0.7.0
+    license: OFL
+    url: https://cm-unicode.sourceforge.io
+site:
+    homepage: "https://github.com/zeptometer/SATySFi-fonts-computer-modern"
+    bug-reports: "https://github.com/zeptometer/SATySFi-fonts-computer-modern/issues"
+    dev-repo: "git+https://github.com/zeptometer/SATySFi-fonts-computer-modern.git"
+font-archive:
+    name: computer-modern-unicode.tar.xz
+    expand-dir: cm-unicode-0.7.0
+    url: https://sourceforge.net/projects/cm-unicode/files/latest/download
+    extract: tar xf computer-modern-unicode.tar.xz

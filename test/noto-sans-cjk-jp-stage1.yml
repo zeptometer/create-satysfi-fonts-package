@@ -1,0 +1,17 @@
+name: fonts-noto-sans-cjk-jp
+author:
+    name: Yuito Murase
+    email: yuito.murase@gmail.com
+font-metadata:
+    name: Noto Sans CJK JP
+    version: 2017-06-01
+    license: OFL
+    url: https://www.google.com/get/noto/
+site:
+    homepage: "https://github.com/zeptometer/SATySFi-fonts-noto-sans-jp"
+    bug-reports: "https://github.com/zeptometer/SATySFi-fonts-noto-sans-jp/issues"
+    dev-repo: "git+https://github.com/zeptometer/SATySFi-fonts-noto-sans-jp.git"
+font-archive:
+    name: noto-sans-jp.zip
+    url: https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
+    extract: unzip -j -d noto-sans-jp -o noto-sans-jp.zip *.otf
