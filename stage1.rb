@@ -33,7 +33,7 @@ build: [
 ]
 install: [
   ["satyrographos" "opam" "install"
-   "-name" "fonts-computer-modern"
+   "-name" "<%= yml["name"] %>"
    "-prefix" "%{prefix}%"
    "-script" "%{build}%/Satyristes"]
 ]

@@ -3,12 +3,12 @@ name: "satysfi-fonts-noto-sans-cjk-jp"
 version: "2017-06-01+satysfi0.0.4"
 synopsis: "SATySFi Font Package for Noto Sans CJK JP fonts"
 description: """
-SATySFi font package for Donald Knuth's Computer Modern Fonts.
+SATySFi font package for Noto Sans CJK JP fonts.
 
 This package installs fonts from https://www.google.com/get/noto/.
 """
-maintainer: "MURASE Yuito <yuito.murase@gmail.com>"
-authors: "MURASE Yuito <yuito.murase@gmail.com>"
+maintainer: "Yuito Murase <yuito.murase@gmail.com>"
+authors: "Yuito Murase <yuito.murase@gmail.com>"
 license: "OFL"
 homepage: "https://github.com/zeptometer/SATySFi-fonts-noto-sans-cjk-jp"
 bug-reports: "https://github.com/zeptometer/SATySFi-fonts-noto-sans-cjk-jp/issues"

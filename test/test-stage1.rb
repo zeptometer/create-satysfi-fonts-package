@@ -18,13 +18,13 @@ class TestStage1 < Test::Unit::TestCase
 
     def test_opam_generated_for_noto_sans_jp
         # given
-        yml = YAML.load_file('noto-sans-jp-stage1.yml')
+        yml = YAML.load_file('noto-sans-cjk-jp-stage1.yml')
 
         # when
         actual = gen_opam(yml)
 
         # then
-        expected = File.read('expected-noto-sans-jp.opam')
+        expected = File.read('expected-noto-sans-cjk-jp.opam')
         assert_equal(expected, actual)
     end
 
