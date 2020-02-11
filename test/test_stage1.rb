@@ -45,15 +45,23 @@ class TestStage1 < Test::Unit::TestCase
     assert_equal(expected, actual)
   end
 
+  def test_get_font_name
+    font_file_name = 'cm-unicode-0.7.0/cmunbi.ttf'
+    expected = 'CMU-Serif-Bold-Extended-Italic'
+    actual = get_font_name(font_file_name)
+    assert_equal(expected, actual)
+  end
+
   def test_stage2_yml_generated_for_computer_modern
     # given
     yml = YAML.load_file('stage1-computer-modern-unicode.yml')
 
     # when
     actual = gen_stage2_yml(yml)
+    YAML.dump(actual, File.open('pohe.yml', 'w'))
 
     # then
-    expected = File.read('expected-stage2-fonts-computer-modern.yml')
+    expected = YAML.load_file('expected-stage2-fonts-computer-modern.yml')
     assert_equal(expected, actual)
   end
 end

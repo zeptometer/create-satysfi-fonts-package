@@ -1,10 +1,13 @@
 ---
 - type: 
-  name: CMU-Bright-Bold
+  name: CMU-Bright-Bold-Extended
   file: cmunbbx.ttf
 - type: 
-  name: CMU-Bright-BoldOblique
-  file: cmunbxo.ttf
+  name: CMU-Serif-Bold-Extended-Italic
+  file: cmunbi.ttf
+- type: 
+  name: CMU-Serif-Bold-Extended-Slanted-Roman
+  file: cmunbl.ttf
 - type: 
   name: CMU-Bright-Oblique
   file: cmunbmo.ttf
@@ -12,86 +15,86 @@
   name: CMU-Bright-Roman
   file: cmunbmr.ttf
 - type: 
-  name: CMU-Bright-SemiBold
-  file: cmunbsr.ttf
-- type: 
-  name: CMU-Bright-SemiBoldOblique
+  name: CMU-Bright-SemiBold-Oblique
   file: cmunbso.ttf
 - type: 
-  name: CMU-Classical-Serif-Italic
-  file: cmunci.ttf
-- type: 
-  name: CMU-Concrete-Bold
-  file: cmunobx.ttf
-- type: 
-  name: CMU-Concrete-BoldItalic
-  file: cmunobi.ttf
-- type: 
-  name: CMU-Concrete-Italic
-  file: cmunoti.ttf
-- type: 
-  name: CMU-Concrete-Roman
-  file: cmunorm.ttf
-- type: 
-  name: CMU-Sans-Serif-Bold
-  file: cmunsx.ttf
-- type: 
-  name: CMU-Sans-Serif-BoldOblique
-  file: cmunso.ttf
-- type: 
-  name: CMU-Sans-Serif-Demi-Condensed
-  file: cmunssdc.ttf
-- type: 
-  name: CMU-Sans-Serif-Medium
-  file: cmunss.ttf
-- type: 
-  name: CMU-Sans-Serif-Oblique
-  file: cmunsi.ttf
-- type: 
-  name: CMU-Serif-Bold
-  file: cmunbx.ttf
-- type: 
-  name: CMU-Serif-BoldItalic
-  file: cmunbi.ttf
-- type: 
-  name: CMU-Serif-Extra-BoldSlanted
-  file: cmunbl.ttf
-- type: 
-  name: CMU-Serif-Extra-RomanSlanted
-  file: cmunsl.ttf
-- type: 
-  name: CMU-Serif-Italic
-  file: cmunti.ttf
-- type: 
-  name: CMU-Serif-Roman
-  file: cmunrm.ttf
-- type: 
-  name: CMU-Serif-Roman
-  file: cmunrm.ttf
-- type: 
-  name: CMU-Serif-Upwright-Italic
-  file: cmunui.ttf
-- type: 
-  name: CMU-Typewriter-Text-Bold
-  file: cmuntb.ttf
-- type: 
-  name: CMU-Typewriter-Text-BoldItalic
-  file: cmuntx.ttf
-- type: 
-  name: CMU-Typewriter-Text-Italic
-  file: cmunit.ttf
+  name: CMU-Bright-SemiBold
+  file: cmunbsr.ttf
 - type: 
   name: CMU-Typewriter-Text-Light
   file: cmunbtl.ttf
 - type: 
-  name: CMU-Typewriter-Text-LightOblique
-  file: cmunbto.tt
+  name: CMU-Typewriter-Text-Light-Oblique
+  file: cmunbto.ttf
+- type: 
+  name: CMU-Serif-Bold-Extended-Roman
+  file: cmunbx.ttf
+- type: 
+  name: CMU-Bright-Bold-Extended-Oblique
+  file: cmunbxo.ttf
+- type: 
+  name: CMU-Classical-Serif-Italic
+  file: cmunci.ttf
+- type: 
+  name: CMU-Typewriter-Text-Italic
+  file: cmunit.ttf
+- type: 
+  name: CMU-Concrete-Bold-Extended-Italic
+  file: cmunobi.ttf
+- type: 
+  name: CMU-Concrete-Bold-Extended-Roman
+  file: cmunobx.ttf
+- type: 
+  name: CMU-Concrete-Roman
+  file: cmunorm.ttf
+- type: 
+  name: CMU-Concrete-Italic
+  file: cmunoti.ttf
+- type: 
+  name: CMU-Serif-Roman-Bold-Nonextended
+  file: cmunrb.ttf
+- type: 
+  name: CMU-Serif-Roman
+  file: cmunrm.ttf
+- type: 
+  name: CMU-Sans-Serif-Oblique
+  file: cmunsi.ttf
+- type: 
+  name: CMU-Serif-Roman-Slanted
+  file: cmunsl.ttf
+- type: 
+  name: CMU-Sans-Serif-Bold-Extended-Oblique
+  file: cmunso.ttf
+- type: 
+  name: CMU-Sans-Serif
+  file: cmunss.ttf
+- type: 
+  name: CMU-Sans-Serif-Demi-Condensed
+  file: cmunssdc.ttf
+- type: 
+  name: CMU-Typewriter-Text-Oblique
+  file: cmunst.ttf
+- type: 
+  name: CMU-Sans-Serif-Bold-Extended
+  file: cmunsx.ttf
+- type: 
+  name: CMU-Typewriter-Text-Bold
+  file: cmuntb.ttf
+- type: 
+  name: CMU-Serif-Italic
+  file: cmunti.ttf
 - type: 
   name: CMU-Typewriter-Text-Regular
   file: cmuntt.ttf
 - type: 
+  name: CMU-Typewriter-Text-Bold-Italic
+  file: cmuntx.ttf
+- type: 
+  name: CMU-Serif-Upright-Italic
+  file: cmunui.ttf
+- type: 
   name: CMU-Typewriter-Text-Variable-Width-Italic
   file: cmunvi.ttf
 - type: 
-  name: CMU-Typewriter-Text-Variable-Width-Medium
+  name: CMU-Typewriter-Text-Variable-Width
   file: cmunvt.ttf
