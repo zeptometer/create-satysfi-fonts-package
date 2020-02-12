@@ -45,9 +45,16 @@ class TestStage1 < Test::Unit::TestCase
     assert_equal(expected, actual)
   end
 
-  def test_get_font_name
+  def test_get_font_name_computer_modern_unicode
     font_file_name = 'cm-unicode-0.7.0/cmunbi.ttf'
     expected = 'CMU-Serif-Bold-Extended-Italic'
+    actual = get_font_name(font_file_name)
+    assert_equal(expected, actual)
+  end
+
+  def test_get_font_name_noto_sans_cjk_jp
+    font_file_name = 'noto-sans-cjk-jp/NotoSansCJKjp-Light.otf'
+    expected = 'Noto-Sans-CJK-JP-Light'
     actual = get_font_name(font_file_name)
     assert_equal(expected, actual)
   end

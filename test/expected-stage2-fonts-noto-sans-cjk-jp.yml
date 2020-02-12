@@ -1,0 +1,28 @@
+---
+- type: 
+  name: Noto-Sans-CJK-JP-Black
+  file: NotoSansCJKjp-Black.otf
+- type: 
+  name: Noto-Sans-CJK-JP-Bold
+  file: NotoSansCJKjp-Bold.otf
+- type: 
+  name: Noto-Sans-CJK-JP-DemiLight
+  file: NotoSansCJKjp-DemiLight.otf
+- type: 
+  name: Noto-Sans-CJK-JP-Light
+  file: NotoSansCJKjp-Light.otf
+- type: 
+  name: Noto-Sans-CJK-JP-Medium
+  file: NotoSansCJKjp-Medium.otf
+- type: 
+  name: Noto-Sans-CJK-JP-Regular
+  file: NotoSansCJKjp-Regular.otf
+- type: 
+  name: Noto-Sans-CJK-JP-Thin
+  file: NotoSansCJKjp-Thin.otf
+- type: 
+  name: Noto-Sans-Mono-CJK-JP-Bold
+  file: NotoSansMonoCJKjp-Bold.otf
+- type: 
+  name: Noto-Sans-Mono-CJK-JP-Regular
+  file: NotoSansMonoCJKjp-Regular.otf
