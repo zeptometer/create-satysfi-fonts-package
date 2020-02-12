@@ -52,16 +52,27 @@ class TestStage1 < Test::Unit::TestCase
     assert_equal(expected, actual)
   end
 
-  def test_stage2_yml_generated_for_computer_modern
+  def test_stage2_yml_generated_for_computer_modern_unicode
     # given
     yml = YAML.load_file('stage1-computer-modern-unicode.yml')
 
     # when
     actual = gen_stage2_yml(yml)
-    YAML.dump(actual, File.open('pohe.yml', 'w'))
 
     # then
     expected = YAML.load_file('expected-stage2-fonts-computer-modern.yml')
+    assert_equal(expected, actual)
+  end
+
+  def test_stage2_yml_generated_for_noto_sans_cjk_jp
+    # given
+    yml = YAML.load_file('stage1-noto-sans-cjk-jp.yml')
+
+    # when
+    actual = gen_stage2_yml(yml)
+
+    # then
+    expected = YAML.load_file('expected-stage2-fonts-noto-sans-cjk-jp.yml')
     assert_equal(expected, actual)
   end
 end
