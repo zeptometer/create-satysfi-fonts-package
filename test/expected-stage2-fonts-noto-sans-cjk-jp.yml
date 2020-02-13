@@ -1,28 +1,47 @@
 ---
-- type: 
-  name: NotoSansCJKjp-Black
-  file: NotoSansCJKjp-Black.otf
-- type: 
-  name: NotoSansCJKjp-Bold
-  file: NotoSansCJKjp-Bold.otf
-- type: 
-  name: NotoSansCJKjp-DemiLight
-  file: NotoSansCJKjp-DemiLight.otf
-- type: 
-  name: NotoSansCJKjp-Light
-  file: NotoSansCJKjp-Light.otf
-- type: 
-  name: NotoSansCJKjp-Medium
-  file: NotoSansCJKjp-Medium.otf
-- type: 
-  name: NotoSansCJKjp-Regular
-  file: NotoSansCJKjp-Regular.otf
-- type: 
-  name: NotoSansCJKjp-Thin
-  file: NotoSansCJKjp-Thin.otf
-- type: 
-  name: NotoSansMonoCJKjp-Bold
-  file: NotoSansMonoCJKjp-Bold.otf
-- type: 
-  name: NotoSansMonoCJKjp-Regular
-  file: NotoSansMonoCJKjp-Regular.otf
+name: fonts-noto-sans-cjk-jp
+author:
+  name: Yuito Murase
+  email: yuito.murase@gmail.com
+font-metadata:
+  name: Noto Sans CJK JP
+  version: 2017-06-01
+  license: OFL
+  url: https://www.google.com/get/noto/
+site:
+  homepage: "https://github.com/zeptometer/SATySFi-fonts-noto-sans-cjk-jp"
+  bug-reports: "https://github.com/zeptometer/SATySFi-fonts-noto-sans-cjk-jp/issues"
+  dev-repo: "git+https://github.com/zeptometer/SATySFi-fonts-noto-sans-cjk-jp.git"
+font-archive:
+  name: noto-sans-cjk-jp.zip
+  expand-dir: noto-sans-cjk-jp
+  url: https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
+  extract: unzip -j -d noto-sans-cjk-jp -o noto-sans-cjk-jp.zip *.otf
+font-list:
+  - type: 
+    name: NotoSansCJKjp-Black
+    file: NotoSansCJKjp-Black.otf
+  - type: 
+    name: NotoSansCJKjp-Bold
+    file: NotoSansCJKjp-Bold.otf
+  - type: 
+    name: NotoSansCJKjp-DemiLight
+    file: NotoSansCJKjp-DemiLight.otf
+  - type: 
+    name: NotoSansCJKjp-Light
+    file: NotoSansCJKjp-Light.otf
+  - type: 
+    name: NotoSansCJKjp-Medium
+    file: NotoSansCJKjp-Medium.otf
+  - type: 
+    name: NotoSansCJKjp-Regular
+    file: NotoSansCJKjp-Regular.otf
+  - type: 
+    name: NotoSansCJKjp-Thin
+    file: NotoSansCJKjp-Thin.otf
+  - type: 
+    name: NotoSansMonoCJKjp-Bold
+    file: NotoSansMonoCJKjp-Bold.otf
+  - type: 
+    name: NotoSansMonoCJKjp-Regular
+    file: NotoSansMonoCJKjp-Regular.otf

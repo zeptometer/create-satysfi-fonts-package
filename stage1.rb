@@ -81,9 +81,13 @@ def make_stage2_yml_entry(dir, font_file_name)
   }
 end
 
-def gen_stage2_yml(yml)
-  expand_dir = yml['font-archive']['expand-dir']
-  get_fonts_in_dir(expand_dir)
-    .map { |fontname| make_stage2_yml_entry(expand_dir, fontname) }
+def gen_font_list(expand_dir_name)
+  get_fonts_in_dir(expand_dir_name)
+    .map { |font_name| make_stage2_yml_entry(expand_dir_name, font_name) }
     .sort_by { |entry| entry['name'] }
+end
+
+def gen_stage2_yml(yml)
+  font_list = gen_font_list(yml['font-archive']['expand-dir'])
+  yml.merge('font-list' => font_list)
 end
