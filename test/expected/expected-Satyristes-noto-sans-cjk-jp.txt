@@ -5,25 +5,15 @@
   (sources
     ((hash "fonts.satysfi-hash" "fonts.satysfi-hash")
      (hash "mathfonts.satysfi-hash" "mathfonts.satysfi-hash")
-     
      (font "NotoSansCJKjp-Black.otf" "noto-sans-cjk-jp/NotoSansCJKjp-Black.otf")
-     
      (font "NotoSansCJKjp-Bold.otf" "noto-sans-cjk-jp/NotoSansCJKjp-Bold.otf")
-     
      (font "NotoSansCJKjp-DemiLight.otf" "noto-sans-cjk-jp/NotoSansCJKjp-DemiLight.otf")
-     
      (font "NotoSansCJKjp-Light.otf" "noto-sans-cjk-jp/NotoSansCJKjp-Light.otf")
-     
      (font "NotoSansCJKjp-Medium.otf" "noto-sans-cjk-jp/NotoSansCJKjp-Medium.otf")
-     
      (font "NotoSansCJKjp-Regular.otf" "noto-sans-cjk-jp/NotoSansCJKjp-Regular.otf")
-     
      (font "NotoSansCJKjp-Thin.otf" "noto-sans-cjk-jp/NotoSansCJKjp-Thin.otf")
-     
      (font "NotoSansMonoCJKjp-Bold.otf" "noto-sans-cjk-jp/NotoSansMonoCJKjp-Bold.otf")
-     
      (font "NotoSansMonoCJKjp-Regular.otf" "noto-sans-cjk-jp/NotoSansMonoCJKjp-Regular.otf")
-     
      ))
   (opam "satysfi-fonts-noto-sans-cjk-jp.opam"))
 (libraryDoc

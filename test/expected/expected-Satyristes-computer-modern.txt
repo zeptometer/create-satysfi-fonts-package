@@ -5,73 +5,39 @@
   (sources
     ((hash "fonts.satysfi-hash" "fonts.satysfi-hash")
      (hash "mathfonts.satysfi-hash" "mathfonts.satysfi-hash")
-     
      (font "cmunbbx.ttf" "cm-unicode-0.7.0/cmunbbx.ttf")
-     
      (font "cmunbxo.ttf" "cm-unicode-0.7.0/cmunbxo.ttf")
-     
      (font "cmunbmo.ttf" "cm-unicode-0.7.0/cmunbmo.ttf")
-     
      (font "cmunbmr.ttf" "cm-unicode-0.7.0/cmunbmr.ttf")
-     
      (font "cmunbsr.ttf" "cm-unicode-0.7.0/cmunbsr.ttf")
-     
      (font "cmunbso.ttf" "cm-unicode-0.7.0/cmunbso.ttf")
-     
      (font "cmunci.ttf" "cm-unicode-0.7.0/cmunci.ttf")
-     
      (font "cmunobx.ttf" "cm-unicode-0.7.0/cmunobx.ttf")
-     
      (font "cmunobi.ttf" "cm-unicode-0.7.0/cmunobi.ttf")
-     
      (font "cmunoti.ttf" "cm-unicode-0.7.0/cmunoti.ttf")
-     
      (font "cmunorm.ttf" "cm-unicode-0.7.0/cmunorm.ttf")
-     
      (font "cmunss.ttf" "cm-unicode-0.7.0/cmunss.ttf")
-     
      (font "cmunsx.ttf" "cm-unicode-0.7.0/cmunsx.ttf")
-     
      (font "cmunso.ttf" "cm-unicode-0.7.0/cmunso.ttf")
-     
      (font "cmunssdc.ttf" "cm-unicode-0.7.0/cmunssdc.ttf")
-     
      (font "cmunsi.ttf" "cm-unicode-0.7.0/cmunsi.ttf")
-     
      (font "cmunbx.ttf" "cm-unicode-0.7.0/cmunbx.ttf")
-     
      (font "cmunbi.ttf" "cm-unicode-0.7.0/cmunbi.ttf")
-     
      (font "cmunrb.ttf" "cm-unicode-0.7.0/cmunrb.ttf")
-     
      (font "cmunbl.ttf" "cm-unicode-0.7.0/cmunbl.ttf")
-     
      (font "cmunti.ttf" "cm-unicode-0.7.0/cmunti.ttf")
-     
      (font "cmunrm.ttf" "cm-unicode-0.7.0/cmunrm.ttf")
-     
      (font "cmunsl.ttf" "cm-unicode-0.7.0/cmunsl.ttf")
-     
      (font "cmunui.ttf" "cm-unicode-0.7.0/cmunui.ttf")
-     
      (font "cmuntb.ttf" "cm-unicode-0.7.0/cmuntb.ttf")
-     
      (font "cmuntx.ttf" "cm-unicode-0.7.0/cmuntx.ttf")
-     
      (font "cmunit.ttf" "cm-unicode-0.7.0/cmunit.ttf")
-     
      (font "cmunbtl.ttf" "cm-unicode-0.7.0/cmunbtl.ttf")
-     
      (font "cmunbto.ttf" "cm-unicode-0.7.0/cmunbto.ttf")
-     
      (font "cmunst.ttf" "cm-unicode-0.7.0/cmunst.ttf")
-     
      (font "cmuntt.ttf" "cm-unicode-0.7.0/cmuntt.ttf")
-     
      (font "cmunvt.ttf" "cm-unicode-0.7.0/cmunvt.ttf")
-     
      (font "cmunvi.ttf" "cm-unicode-0.7.0/cmunvi.ttf")
-     
      ))
   (opam "satysfi-fonts-computer-modern-unicode.opam"))
 (libraryDoc

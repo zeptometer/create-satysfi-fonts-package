@@ -10,10 +10,8 @@ SATYRISTES_TEMPLATE = <<~OPAM
     (sources
       ((hash "fonts.satysfi-hash" "fonts.satysfi-hash")
        (hash "mathfonts.satysfi-hash" "mathfonts.satysfi-hash")
-       <% for font in yml['font-list'] do %>
-       (font "<%= font['file'] %>" "<%= yml['font-archive']['expand-dir'] %>/<%= font['file'] %>")
-       <% end %>
-       ))
+       <% for font in yml['font-list'] do %>(font "<%= font['file'] %>" "<%= yml['font-archive']['expand-dir'] %>/<%= font['file'] %>")
+       <% end %>))
     (opam "satysfi-<%= yml['name'] %>.opam"))
   (libraryDoc
     (name "<%= yml['name'] %>-doc")
