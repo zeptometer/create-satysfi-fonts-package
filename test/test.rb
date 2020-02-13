@@ -2,7 +2,8 @@
 
 require 'test-unit'
 require 'yaml'
-require '../stage1'
+require '../gen_opam'
+require '../gen_stage2_yml'
 
 def prepare_archive(yml_file)
   yml = YAML.load_file(yml_file)
