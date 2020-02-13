@@ -18,31 +18,31 @@ end
 
 class TestStage1 < Test::Unit::TestCase
   def setup
-    prepare_archive('stage1-computer-modern-unicode.yml')
-    prepare_archive('stage1-noto-sans-cjk-jp.yml')
+    prepare_archive('input/stage1-computer-modern-unicode.yml')
+    prepare_archive('input/stage1-noto-sans-cjk-jp.yml')
   end
 
   def test_opam_generated_for_computer_modern
     # given
-    yml = YAML.load_file('stage1-computer-modern-unicode.yml')
+    yml = YAML.load_file('input/stage1-computer-modern-unicode.yml')
 
     # when
     actual = gen_opam(yml)
 
     # then
-    expected = File.read('expected-computer-modern-unicode.opam')
+    expected = File.read('expected/expected-computer-modern-unicode.opam')
     assert_equal(expected, actual)
   end
 
   def test_opam_generated_for_noto_sans_jp
     # given
-    yml = YAML.load_file('stage1-noto-sans-cjk-jp.yml')
+    yml = YAML.load_file('input/stage1-noto-sans-cjk-jp.yml')
 
     # when
     actual = gen_opam(yml)
 
     # then
-    expected = File.read('expected-noto-sans-cjk-jp.opam')
+    expected = File.read('expected/expected-noto-sans-cjk-jp.opam')
     assert_equal(expected, actual)
   end
 
@@ -62,25 +62,25 @@ class TestStage1 < Test::Unit::TestCase
 
   def test_stage2_yml_generated_for_computer_modern_unicode
     # given
-    yml = YAML.load_file('stage1-computer-modern-unicode.yml')
+    yml = YAML.load_file('input/stage1-computer-modern-unicode.yml')
 
     # when
     actual = gen_stage2_yml(yml)
 
     # then
-    expected = YAML.load_file('expected-stage2-fonts-computer-modern.yml')
+    expected = YAML.load_file('expected/expected-stage2-fonts-computer-modern.yml')
     assert_equal(expected, actual)
   end
 
   def test_stage2_yml_generated_for_noto_sans_cjk_jp
     # given
-    yml = YAML.load_file('stage1-noto-sans-cjk-jp.yml')
+    yml = YAML.load_file('input/stage1-noto-sans-cjk-jp.yml')
 
     # when
     actual = gen_stage2_yml(yml)
 
     # then
-    expected = YAML.load_file('expected-stage2-fonts-noto-sans-cjk-jp.yml')
+    expected = YAML.load_file('expected/expected-stage2-fonts-noto-sans-cjk-jp.yml')
     assert_equal(expected, actual)
   end
 end
