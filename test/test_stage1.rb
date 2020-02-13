@@ -47,14 +47,14 @@ class TestStage1 < Test::Unit::TestCase
 
   def test_get_font_name_computer_modern_unicode
     font_file_name = 'cm-unicode-0.7.0/cmunbi.ttf'
-    expected = 'CMU-Serif-Bold-Extended-Italic'
+    expected = 'CMUSerif-BoldItalic'
     actual = get_font_name(font_file_name)
     assert_equal(expected, actual)
   end
 
   def test_get_font_name_noto_sans_cjk_jp
     font_file_name = 'noto-sans-cjk-jp/NotoSansCJKjp-Light.otf'
-    expected = 'Noto-Sans-CJK-JP-Light'
+    expected = 'NotoSansCJKjp-Light'
     actual = get_font_name(font_file_name)
     assert_equal(expected, actual)
   end

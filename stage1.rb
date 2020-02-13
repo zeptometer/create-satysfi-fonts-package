@@ -70,7 +70,7 @@ end
 
 def get_font_name(font_file_name)
   font = TTFunk::File.open(font_file_name)
-  font.name.font_name[0].gsub(/\s+/, '-').to_s
+  font.name.postscript_name.to_s
 end
 
 def make_stage2_yml_entry(dir, font_file_name)
@@ -85,5 +85,5 @@ def gen_stage2_yml(yml)
   expand_dir = yml['font-archive']['expand-dir']
   get_fonts_in_dir(expand_dir)
     .map { |fontname| make_stage2_yml_entry(expand_dir, fontname) }
-    .sort_by { |entry| entry['namae'] }
+    .sort_by { |entry| entry['name'] }
 end
