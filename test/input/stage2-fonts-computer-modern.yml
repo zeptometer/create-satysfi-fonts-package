@@ -18,102 +18,102 @@ font-archive:
   url: https://sourceforge.net/projects/cm-unicode/files/latest/download
   extract: tar xf computer-modern-unicode.tar.xz
 font-list:
-  - type: 
+  - type: latin
     name: CMUBright-Bold
     file: cmunbbx.ttf
-  - type: 
+  - type: latin
     name: CMUBright-BoldOblique
     file: cmunbxo.ttf
-  - type: 
+  - type: latin
     name: CMUBright-Oblique
     file: cmunbmo.ttf
-  - type: 
+  - type: latin
     name: CMUBright-Roman
     file: cmunbmr.ttf
-  - type: 
+  - type: latin
     name: CMUBright-SemiBold
     file: cmunbsr.ttf
-  - type: 
+  - type: latin
     name: CMUBright-SemiBoldOblique
     file: cmunbso.ttf
-  - type: 
+  - type: latin
     name: CMUClassicalSerif-Italic
     file: cmunci.ttf
-  - type: 
+  - type: latin
     name: CMUConcrete-Bold
     file: cmunobx.ttf
-  - type: 
+  - type: latin
     name: CMUConcrete-BoldItalic
     file: cmunobi.ttf
-  - type: 
+  - type: latin
     name: CMUConcrete-Italic
     file: cmunoti.ttf
-  - type: 
+  - type: latin
     name: CMUConcrete-Roman
     file: cmunorm.ttf
-  - type: 
+  - type: latin
     name: CMUSansSerif
     file: cmunss.ttf
-  - type: 
+  - type: latin
     name: CMUSansSerif-Bold
     file: cmunsx.ttf
-  - type: 
+  - type: latin
     name: CMUSansSerif-BoldOblique
     file: cmunso.ttf
-  - type: 
+  - type: latin
     name: CMUSansSerif-DemiCondensed
     file: cmunssdc.ttf
-  - type: 
+  - type: latin
     name: CMUSansSerif-Oblique
     file: cmunsi.ttf
-  - type: 
+  - type: latin
     name: CMUSerif-Bold
     file: cmunbx.ttf
-  - type: 
+  - type: latin
     name: CMUSerif-BoldItalic
     file: cmunbi.ttf
-  - type: 
+  - type: latin
     name: CMUSerif-BoldNonextended
     file: cmunrb.ttf
-  - type: 
+  - type: latin
     name: CMUSerif-BoldSlanted
     file: cmunbl.ttf
-  - type: 
+  - type: latin
     name: CMUSerif-Italic
     file: cmunti.ttf
-  - type: 
+  - type: latin
     name: CMUSerif-Roman
     file: cmunrm.ttf
-  - type: 
+  - type: latin
     name: CMUSerif-RomanSlanted
     file: cmunsl.ttf
-  - type: 
+  - type: latin
     name: CMUSerif-UprightItalic
     file: cmunui.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriter-Bold
     file: cmuntb.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriter-BoldItalic
     file: cmuntx.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriter-Italic
     file: cmunit.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriter-Light
     file: cmunbtl.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriter-LightOblique
     file: cmunbto.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriter-Oblique
     file: cmunst.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriter-Regular
     file: cmuntt.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriterVariable
     file: cmunvt.ttf
-  - type: 
+  - type: latin
     name: CMUTypewriterVariable-Italic
     file: cmunvi.ttf

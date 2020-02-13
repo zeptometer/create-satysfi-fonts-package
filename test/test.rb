@@ -2,6 +2,7 @@
 
 require 'test-unit'
 require 'yaml'
+require '../gen_hash'
 require '../gen_opam'
 require '../gen_satyristes'
 require '../gen_stage2_yml'
@@ -106,6 +107,30 @@ class TestStage1 < Test::Unit::TestCase
 
     # then
     expected = File.read('expected/expected-Satyristes-noto-sans-cjk-jp.txt')
+    assert_equal(expected, actual)
+  end
+
+  def test_font_hash_generation_for_computer_modern
+    # given
+    yml = YAML.load_file('input/stage2-fonts-computer-modern.yml')
+
+    # when
+    actual = gen_font_hash(yml)
+
+    # then
+    expected = File.read('expected/expected-computer-modern-fonts.satysfi-hash')
+    assert_equal(expected, actual)
+  end
+
+  def test_font_hash_generation_for_noto_sans_cjk_jp
+    # given
+    yml = YAML.load_file('input/stage2-fonts-noto-sans-cjk-jp.yml')
+
+    # when
+    actual = gen_font_hash(yml)
+
+    # then
+    expected = File.read('expected/expected-noto-sans-cjk-jp-fonts.satysfi-hash')
     assert_equal(expected, actual)
   end
 end

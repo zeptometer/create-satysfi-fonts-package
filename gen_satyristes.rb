@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'erb'
-require 'digest'
 
 SATYRISTES_TEMPLATE = <<~OPAM
   (version 0.0.2)
