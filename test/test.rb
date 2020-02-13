@@ -3,6 +3,7 @@
 require 'test-unit'
 require 'yaml'
 require '../gen_opam'
+require '../gen_satyristes'
 require '../gen_stage2_yml'
 
 def prepare_archive(yml_file)
@@ -81,6 +82,30 @@ class TestStage1 < Test::Unit::TestCase
 
     # then
     expected = YAML.load_file('expected/expected-stage2-fonts-noto-sans-cjk-jp.yml')
+    assert_equal(expected, actual)
+  end
+
+  def test_satyristes_generation_for_computer_modern
+    # given
+    yml = YAML.load_file('input/stage2-fonts-computer-modern.yml')
+
+    # when
+    actual = gen_satyristes(yml)
+
+    # then
+    expected = File.read('expected/expected-Satyristes-computer-modern.txt')
+    assert_equal(expected, actual)
+  end
+
+  def test_satyristes_generation_for_noto_sans_cjk
+    # given
+    yml = YAML.load_file('input/stage2-fonts-noto-sans-cjk-jp.yml')
+
+    # when
+    actual = gen_satyristes(yml)
+
+    # then
+    expected = File.read('expected/expected-Satyristes-noto-sans-cjk-jp.txt')
     assert_equal(expected, actual)
   end
 end
