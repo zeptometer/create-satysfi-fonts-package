@@ -9,9 +9,9 @@ font-metadata:
   license: OFL
   url: https://cm-unicode.sourceforge.io
 site:
-  homepage: "https://github.com/zeptometer/SATySFi-fonts-computer-modern"
-  bug-reports: "https://github.com/zeptometer/SATySFi-fonts-computer-modern/issues"
-  dev-repo: "git+https://github.com/zeptometer/SATySFi-fonts-computer-modern.git"
+  homepage: "https://github.com/zeptometer/SATySFi-fonts-computer-modern-unicode"
+  bug-reports: "https://github.com/zeptometer/SATySFi-fonts-computer-modern-unicode/issues"
+  dev-repo: "git+https://github.com/zeptometer/SATySFi-fonts-computer-modern-unicode.git"
 font-archive:
   name: computer-modern-unicode.tar.xz
   expand-dir: cm-unicode-0.7.0
