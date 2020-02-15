@@ -56,19 +56,25 @@ DOC_SATY_TEMPLATE = <<~TEMPLATE
     show-title = true;
     show-toc = false;
   |) '<
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Black`);
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Bold`);
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-DemiLight`);
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Light`);
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Medium`);
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Regular`);
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Thin`);
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansMonoCJKjp-Bold`);
-    +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansMonoCJKjp-Regular`);
+    <% for font in latin_fonts %>+show-latin-font(`<%= pkgname %>:<%= font['name'] %>`);
+    <% end %>
+    <% for font in cjk_fonts %>+show-cjk-font(`<%= pkgname %>:<%= font['name'] %>`);
+    <% end %>
+    <% for font in math_fonts %>+show-math-font(`<%= pkgname %>:<%= font['name'] %>`);
+    <% end %>
   >
 TEMPLATE
 
+def select_fonts(fonts, type)
+  fonts.select { |font| font['type'] == type }
+end
+
 def gen_doc_saty(yml)
+  pkgname = yml['name']
+  cjk_fonts = select_fonts(yml['font-list'], 'cjk')
+  latin_fonts = select_fonts(yml['font-list'], 'latin')
+  math_fonts = select_fonts(yml['font-list'], 'math')
+
   ERB.new(DOC_SATY_TEMPLATE)
      .result(binding)
 end

@@ -167,4 +167,18 @@ class TestStage1 < Test::Unit::TestCase
     expected = read_expect('expected-noto-sans-cjk-jp-doc.saty')
     assert_equal(expected, actual)
   end
+
+  def test_doc_saty_generation_for_computer_modern_unicode_jp
+    yml = load_yaml_input('stage2-fonts-computer-modern-unicode.yml')
+    actual = gen_doc_saty(yml)
+    expected = read_expect('expected-computer-modern-unicode-doc.saty')
+    assert_equal(expected, actual)
+  end
+
+  def test_doc_saty_generation_for_asana_math_jp
+    yml = load_yaml_input('stage2-fonts-asana-math.yml')
+    actual = gen_doc_saty(yml)
+    expected = read_expect('expected-asana-math-doc.saty')
+    assert_equal(expected, actual)
+  end
 end

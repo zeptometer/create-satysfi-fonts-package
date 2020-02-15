@@ -1,0 +1,89 @@
+@require: stdjabook
+@require: code
+@require: itemize
+@require: math
+@require: base/block
+@require: base/inline
+
+let lorem = {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+let lemon = {何故だかその頃私は見すぼらしくて美しいものに強くひきつけられたのを覚えている。風景にしても壊れかかった街だとか、その街にしてもよそよそしい表通りよりもどこか親しみのある、汚い洗濯物が干してあったりがらくたが転がしてあったりむさくるしい部屋が覗のぞいていたりする裏通りが好きであった。}
+let mathexample = {${\abs{\mathrm{Orb}_G\(x\)} \cdot \abs{\mathrm{Stab}_G\(x\)} = \abs{G}}}
+
+let make-heading fontname ctx =
+  ctx |> set-paragraph-margin 30pt 0pt
+      |> set-font-size 14pt
+      |> Block.of-inline true false (Inline.of-string fontname)
+
+let-block ctx +show-math-font name =
+  let heading = ctx |> make-heading name
+  in
+  let example = ctx
+    |> set-math-font name
+    |> Block.of-inline true true (Inline.read mathexample)
+  in
+  Block.concat [heading; example]
+
+let-block ctx +show-cjk-font name =
+  let heading = ctx |> make-heading name
+  in
+  let example = ctx
+    |> set-font HanIdeographic (name, 1., 0.)
+    |> set-font Kana (name, 1., 0.)
+    |> Block.of-inline true true (Inline.read lemon)
+  in
+  Block.concat [heading; example]
+
+let-block ctx +show-latin-font name =
+  let heading = ctx |> make-heading name
+  in
+  let example = ctx
+    |> set-font Latin (name, 1., 0.)
+    |> set-font OtherScript (name, 1., 0.)
+    |> Block.of-inline true true (Inline.read lorem)
+  in
+  Block.concat [heading; example]
+
+in
+document (|
+  title = {\SATySFi;-fonts-computer-modern};
+  author = {Yuito Murase};
+  show-title = true;
+  show-toc = false;
+|) '<
+  +show-latin-font(`fonts-computer-modern-unicode:CMUBright-Bold`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUBright-BoldOblique`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUBright-Oblique`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUBright-Roman`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUBright-SemiBold`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUBright-SemiBoldOblique`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUClassicalSerif-Italic`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUConcrete-Bold`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUConcrete-BoldItalic`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUConcrete-Italic`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUConcrete-Roman`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSansSerif`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSansSerif-Bold`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSansSerif-BoldOblique`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSansSerif-DemiCondensed`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSansSerif-Oblique`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSerif-Bold`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSerif-BoldItalic`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSerif-BoldNonextended`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSerif-BoldSlanted`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSerif-Italic`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSerif-Roman`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSerif-RomanSlanted`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUSerif-UprightItalic`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriter-Bold`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriter-BoldItalic`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriter-Italic`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriter-Light`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriter-LightOblique`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriter-Oblique`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriter-Regular`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriterVariable`);
+  +show-latin-font(`fonts-computer-modern-unicode:CMUTypewriterVariable-Italic`);
+  
+  
+  
+>

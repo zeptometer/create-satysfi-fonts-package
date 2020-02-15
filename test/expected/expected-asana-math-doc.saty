@@ -51,15 +51,7 @@ document (|
   show-toc = false;
 |) '<
   
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Black`);
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Bold`);
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-DemiLight`);
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Light`);
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Medium`);
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Regular`);
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansCJKjp-Thin`);
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansMonoCJKjp-Bold`);
-  +show-cjk-font(`fonts-noto-sans-cjk-jp:NotoSansMonoCJKjp-Regular`);
   
+  +show-math-font(`fonts-asana-math:AsanaMath`);
   
 >
