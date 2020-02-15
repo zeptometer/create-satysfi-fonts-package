@@ -3,6 +3,7 @@
 require 'test-unit'
 require 'yaml'
 require_relative '../gen_doc_opam'
+require_relative '../gen_doc_saty'
 require_relative '../gen_hash'
 require_relative '../gen_opam'
 require_relative '../gen_readme'
@@ -157,6 +158,13 @@ class TestStage1 < Test::Unit::TestCase
     yml = load_yaml_input('stage2-fonts-noto-sans-cjk-jp.yml')
     actual = gen_doc_opam(yml)
     expected = read_expect('expected-noto-sans-cjk-jp-doc.opam')
+    assert_equal(expected, actual)
+  end
+
+  def test_doc_saty_generation_for_noto_sans_cjk_jp
+    yml = load_yaml_input('stage2-fonts-noto-sans-cjk-jp.yml')
+    actual = gen_doc_saty(yml)
+    expected = read_expect('expected-noto-sans-cjk-jp-doc.saty')
     assert_equal(expected, actual)
   end
 end
