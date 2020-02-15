@@ -2,6 +2,7 @@
 
 require 'test-unit'
 require 'yaml'
+require_relative '../gen_doc_opam'
 require_relative '../gen_hash'
 require_relative '../gen_opam'
 require_relative '../gen_readme'
@@ -145,10 +146,17 @@ class TestStage1 < Test::Unit::TestCase
     assert_equal(expected, actual)
   end
 
-  def test_doc_opam_generation_for_noto_sans_cjk_jp
-    yml = load_yaml_input('stage2-fonts-noto-sans-cjk-jp.yml')
+  def test_doc_opam_generation_for_computer_modern_unicode
+    yml = load_yaml_input('stage2-fonts-computer-modern-unicode.yml')
     actual = gen_doc_opam(yml)
-    expected = read_expect('expected-noto-sans-cjk-jp-doc.opam')
+    expected = read_expect('expected-computer-modern-unicode-doc.opam')
     assert_equal(expected, actual)
   end
+
+  # def test_doc_opam_generation_for_noto_sans_cjk_jp
+  #   yml = load_yaml_input('stage2-fonts-noto-sans-cjk-jp.yml')
+  #   actual = gen_doc_opam(yml)
+  #   expected = read_expect('expected-noto-sans-cjk-jp-doc.opam')
+  #   assert_equal(expected, actual)
+  # end
 end
