@@ -11,7 +11,7 @@ def gen_hash_string(pkgname, fonts)
   "{\n  #{content}\n}\n"
 end
 
-def gen_font_hash(yml)
+def gen_fonts_hash(yml)
   fonts = yml['font-list'].select do |font|
     %w[latin cjk].include? font['type']
   end
@@ -19,7 +19,7 @@ def gen_font_hash(yml)
   gen_hash_string(yml['name'], fonts)
 end
 
-def gen_math_font_hash(yml)
+def gen_mathfonts_hash(yml)
   fonts = yml['font-list'].select do |font|
     font['type'] == 'math'
   end

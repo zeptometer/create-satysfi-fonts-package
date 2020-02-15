@@ -1,0 +1,23 @@
+---
+name: fonts-asana-math
+author:
+  name: Yuito Murase
+  email: yuito.murase@gmail.com
+font-metadata:
+  name: Computer Modern Unicode
+  version: 000.958
+  license: OFL
+  url: https://cm-unicode.sourceforge.io
+site:
+  homepage: "https://github.com/zeptometer/SATySFi-fonts-asana-math"
+  bug-reports: "https://github.com/zeptometer/SATySFi-fonts-asana-math/issues"
+  dev-repo: "git+https://github.com/zeptometer/SATySFi-fonts-asana-math.git"
+font-archive:
+  name: Asana-Math.otf
+  expand-dir: asana-math
+  url: http://mirrors.ctan.org/fonts/Asana-Math/Asana-Math.otf
+  extract: mv Asana-Math.otf asana-math/Asana-Math.otf
+font-list:
+  - type: math
+    name: AsanaMath
+    file: Asana-Math.otf
