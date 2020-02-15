@@ -41,25 +41,15 @@ class TestStage1 < Test::Unit::TestCase
   end
 
   def test_opam_generated_for_computer_modern
-    # given
     yml = load_yaml_input('stage1-computer-modern-unicode.yml')
-
-    # when
     actual = gen_opam(yml)
-
-    # then
     expected = read_expect('expected-computer-modern-unicode.opam')
     assert_equal(expected, actual)
   end
 
   def test_opam_generated_for_noto_sans_jp
-    # given
     yml = load_yaml_input('stage1-noto-sans-cjk-jp.yml')
-
-    # when
     actual = gen_opam(yml)
-
-    # then
     expected = read_expect('expected-noto-sans-cjk-jp.opam')
     assert_equal(expected, actual)
   end
@@ -79,110 +69,79 @@ class TestStage1 < Test::Unit::TestCase
   end
 
   def test_stage2_yml_generated_for_computer_modern_unicode
-    # given
     yml = load_yaml_input('stage1-computer-modern-unicode.yml')
-
-    # when
     actual = gen_stage2_yml(yml)
-
-    # then
     expected = load_yaml_expect('expected-stage2-fonts-computer-modern.yml')
     assert_equal(expected, actual)
   end
 
   def test_stage2_yml_generated_for_noto_sans_cjk_jp
-    # given
     yml = load_yaml_input('stage1-noto-sans-cjk-jp.yml')
-
-    # when
     actual = gen_stage2_yml(yml)
-
-    # then
     expected = load_yaml_expect('expected-stage2-fonts-noto-sans-cjk-jp.yml')
     assert_equal(expected, actual)
   end
 
   def test_satyristes_generation_for_computer_modern
-    # given
     yml = load_yaml_input('stage2-fonts-computer-modern.yml')
-
-    # when
     actual = gen_satyristes(yml)
-
-    # then
     expected = read_expect('expected-Satyristes-computer-modern.txt')
     assert_equal(expected, actual)
   end
 
   def test_satyristes_generation_for_noto_sans_cjk
-    # given
     yml = load_yaml_input('stage2-fonts-noto-sans-cjk-jp.yml')
-
-    # when
     actual = gen_satyristes(yml)
-
-    # then
     expected = read_expect('expected-Satyristes-noto-sans-cjk-jp.txt')
     assert_equal(expected, actual)
   end
 
   def test_fonts_hash_generation_for_computer_modern
-    # given
     yml = load_yaml_input('stage2-fonts-computer-modern.yml')
-
-    # when
     actual = gen_fonts_hash(yml)
-
-    # then
     expected = read_expect('expected-computer-modern-fonts.satysfi-hash')
     assert_equal(expected, actual)
   end
 
   def test_fonts_hash_generation_for_noto_sans_cjk_jp
-    # given
     yml = load_yaml_input('stage2-fonts-noto-sans-cjk-jp.yml')
-
-    # when
     actual = gen_fonts_hash(yml)
-
-    # then
     expected = read_expect('expected-noto-sans-cjk-jp-fonts.satysfi-hash')
     assert_equal(expected, actual)
   end
 
   def test_mathfonts_hash_generation_for_noto_sans_cjk_jp
-    # given
     yml = load_yaml_input('stage2-fonts-noto-sans-cjk-jp.yml')
-
-    # when
     actual = gen_mathfonts_hash(yml)
-
-    # then
     expected = read_expect('expected-noto-sans-cjk-jp-mathfonts.satysfi-hash')
     assert_equal(expected, actual)
   end
 
+  def test_mathfonts_hash_generation_for_asana_math
+    yml = load_yaml_input('stage2-fonts-asana-math.yml')
+    actual = gen_mathfonts_hash(yml)
+    expected = read_expect('expected-asana-math-mathfonts.satysfi-hash')
+    assert_equal(expected, actual)
+  end
+
   def test_readme_generation_for_computer_modern
-    # given
     yml = load_yaml_input('stage2-fonts-computer-modern.yml')
-
-    # when
     actual = gen_readme(yml)
-
-    # then
     expected = read_expect('expected-computer-modern-README.md')
     assert_equal(expected, actual)
   end
 
   def test_readme_generation_for_noto_sans_cjk_jp
-    # given
     yml = load_yaml_input('stage2-fonts-noto-sans-cjk-jp.yml')
-
-    # when
     actual = gen_readme(yml)
-
-    # then
     expected = read_expect('expected-noto-sans-cjk-jp-README.md')
+    assert_equal(expected, actual)
+  end
+
+  def test_readme_generation_for_asana_math
+    yml = load_yaml_input('stage2-fonts-asana-math.yml')
+    actual = gen_readme(yml)
+    expected = read_expect('expected-asana-math-README.md')
     assert_equal(expected, actual)
   end
 end

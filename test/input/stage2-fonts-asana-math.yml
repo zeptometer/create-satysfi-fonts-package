@@ -4,10 +4,10 @@ author:
   name: Yuito Murase
   email: yuito.murase@gmail.com
 font-metadata:
-  name: Computer Modern Unicode
+  name: Asana Math
   version: 000.958
   license: OFL
-  url: https://cm-unicode.sourceforge.io
+  url: https://www.ctan.org/tex-archive/fonts/Asana-Math/
 site:
   homepage: "https://github.com/zeptometer/SATySFi-fonts-asana-math"
   bug-reports: "https://github.com/zeptometer/SATySFi-fonts-asana-math/issues"
