@@ -18,14 +18,14 @@ DOC_SATY_TEMPLATE = <<~TEMPLATE
   let make-heading fontname ctx =
     ctx |> set-paragraph-margin 30pt 0pt
         |> set-font-size 14pt
-        |> Block.of-inline true false (Inline.of-string fontname)
+        |> Block.of-inline ?:(true) true false (Inline.of-string fontname)
 
   let-block ctx +show-math-font name =
     let heading = ctx |> make-heading name
     in
     let example = ctx
       |> set-math-font name
-      |> Block.of-inline true true (Inline.read mathexample)
+      |> Block.of-inline ?:(true) true true (Inline.read mathexample)
     in
     Block.concat [heading; example]
 
@@ -35,7 +35,7 @@ DOC_SATY_TEMPLATE = <<~TEMPLATE
     let example = ctx
       |> set-font HanIdeographic (name, 1., 0.)
       |> set-font Kana (name, 1., 0.)
-      |> Block.of-inline true true (Inline.read lemon)
+      |> Block.of-inline ?:(true) true true (Inline.read lemon)
     in
     Block.concat [heading; example]
 
@@ -45,7 +45,7 @@ DOC_SATY_TEMPLATE = <<~TEMPLATE
     let example = ctx
       |> set-font Latin (name, 1., 0.)
       |> set-font OtherScript (name, 1., 0.)
-      |> Block.of-inline true true (Inline.read lorem)
+      |> Block.of-inline ?:(true) true true (Inline.read lorem)
     in
     Block.concat [heading; example]
 
