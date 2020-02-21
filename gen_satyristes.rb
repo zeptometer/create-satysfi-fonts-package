@@ -21,7 +21,8 @@ SATYRISTES_TEMPLATE = <<~OPAM
     (sources
       ((doc "doc-<%= yml['name'] %>.pdf" "./doc-<%= yml['name'] %>.pdf")))
     (opam "satysfi-<%= yml['name'] %>-doc.opam")
-    (dependencies ((<%= yml['name'] %> ()))))
+    (dependencies ((base ())
+                   (<%= yml['name'] %> ()))))
 OPAM
 
 def gen_satyristes(yml)
